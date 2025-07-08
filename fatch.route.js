@@ -60,3 +60,24 @@ function fatchingdata(){
 fatchingdata()
 //promise is a class which is used asynckranous aperation 
 //axios is a external librarery whicb also use promise 
+
+
+// async function fat(){//creatwd a function 
+//   const facthing = await fetch("https://jsonplaceholder.typicode.com/todos/1")//faching the data from resources , it taskes time so need to await
+//   const data = await facthing.json()//it also takes time so need to await and in response json
+//    document.getElementById("dom").innerHTML = JSON.stringify(data, null, 2);//It converts a JavaScript object into a readable JSON string
+//    //null=>This controls what properties to include. If you pass null, it includes everything. function or array
+//    //2This controls indentation (for pretty formatting).
+//}
+//| Method                | Purpose                                    |
+// | --------------------- | ------------------------------------------ |
+// | `JSON.stringify(obj)` | Converts a JavaScript object → JSON string |
+// | `JSON.parse(string)`  | Converts a JSON string → JavaScript object |
+const axios = require('axios');
+
+async function aixi(){
+  const fatching= await axios("https://jsonplaceholder.typicode.com/todos/1")
+  const response =  fatching.data;
+   console.log(response)
+}
+aixi()
