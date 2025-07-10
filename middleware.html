@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>//script tag that we are connection frontend to thee backend middleware by seerving on internet 
+  function sendingrequesdt(){// sunction tht  going to connet after we click button to the backend 
+    const a=document.getElementById("a").value;
+    const b=document.getElementById("b").value;
+    axios.post("http://localhost:3000/sum",{//backend attachment 
+      a:a,
+      b:b,
+  })
+  }
+</script>
+</head>
+<body>
+<input id="a" type="text" placeholder="number"></input>
+<input id="b" type="text" placeholder="number"></input>
+<button onclick="sendingrequesdt()">Find Sum</button>
+</body>
+
+</html>
