@@ -85,4 +85,34 @@ function Component(){
 }
 
 
+
+//we can also deine the componenet like this
+function App() {
+  const [count , setcount] = useState(0);
+  function increase(){
+    setcount( c=>c+1)
+  }
+  return (
+    <div>
+      <Component count={count}/>
+      <button onClick={increase}>increase</button>
+    </div>
+  );
+}
+
+function Component(props){
+  useEffect(function(){
+    console.log("mont");
+
+    return function(){
+      console.log("unouunt")
+    }
+  },[])
+  return <div>
+    counter {props.count}
+  </div>
+}
+
+
+
 export default App;
