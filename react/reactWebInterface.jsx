@@ -64,6 +64,27 @@ function PostComponent({name, followersCounr, time, description}){
   </div>
 }
 
+//sinple toggle button with dynamically re randering the content 
+function App(){
+  return (
+    <div style={{backgroundColor:"#dfe6e9", height:"100vh"}}>
+      <Toggle></Toggle>
+    </div>
+  )
+}
+function Toggle(){
+  let [count, setcount]=useState(false)
+
+  function Togglle(){
+  setcount(!count)
+  }
+  return(
+    <div>
+     <button onClick={Togglle}>Toggel message</button>
+     {count ?( <p>this is message from clicking the button</p>):(null)}
+    </div>
+  )
+}
 
 
 
