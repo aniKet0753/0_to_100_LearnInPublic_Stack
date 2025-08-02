@@ -16,7 +16,7 @@ function App(){
     settab(json)
     setloder(false)
     console.log(tododta.title)
-  })
+  })                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
   },[currenttodo])
 
   return(
